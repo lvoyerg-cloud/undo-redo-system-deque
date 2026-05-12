@@ -32,7 +32,7 @@ Antes de ejecutar el proyecto, asegúrese de contar con:
 git clone https://github.com/usuario/UndoRedoSystem.git
 ```
 Ejemplo:
-git clone https://github.com/Lvoyerg-Cloud/PrintQueueSim.git
+[git clone https://github.com/Lvoyerg-Cloud/PrintQueueSim.git](https://github.com/lvoyerg-cloud/undo-redo-system-deque/blob/main/README.md)
 
 ### 2. Ingresar al directorio del proyecto
 
