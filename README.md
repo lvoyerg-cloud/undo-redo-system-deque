@@ -43,7 +43,7 @@ cd UndoRedoSystem
 ## 3. Ejecutar programa 
 
 ```bash
-python "UndoRedoSystem.py"
+python "undo_redo_system.py"
 ```
 Ejecución desde la terminal: 
 1. git clone https://github.com/Lvoyerg-Cloud/UndoRedoSystem.git
