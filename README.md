@@ -46,7 +46,7 @@ cd UndoRedoSystem
 python "UndoRedoSystem.py"
 ```
 Ejecución desde la terminal: 
-1. git clone https://github.com/usuario/UndoRedoSystem.git
+1. git clone https://github.com/Lvoyerg-Cloud/UndoRedoSystem.git
 2. cd UndoRedoSystem
 3. python "UndoRedoSystem.py"
 ## Funcionamiento del sistema
