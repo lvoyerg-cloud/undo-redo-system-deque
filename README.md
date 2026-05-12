@@ -29,8 +29,10 @@ Antes de ejecutar el proyecto, asegúrese de contar con:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/Lvoyerg-Cloud/UndoRedoSystem.git
+git clone https://github.com/usuario/UndoRedoSystem.git
 ```
+Ejemplo:
+git clone https://github.com/Lvoyerg-Cloud/PrintQueueSim.git
 
 ### 2. Ingresar al directorio del proyecto
 
@@ -43,7 +45,10 @@ cd UndoRedoSystem
 ```bash
 python "UndoRedoSystem.py"
 ```
-
+Ejecución desde la terminal: 
+1. git clone https://github.com/usuario/UndoRedoSystem.git
+2. cd UndoRedoSystem
+3. python "UndoRedoSystem.py"
 ## Funcionamiento del sistema
 
 El sistema permite realizar las siguientes operaciones:
