@@ -1,9 +1,11 @@
 # ==========================================
 # UNIVERSIDAD MARIANO GÁLVEZ
-# Curso: Estructura de Datos
-# Proyecto: Sistema Undo y Redo con Deque
+# Curso: Programación III
+# Tarea: [S11] Deque - Undo and Redo
 #
 # Nombre: Louis Neil Voyer García
+# Carnet: 2890-24-16741
+# Catedrático: Ing. Yoel Monzón 
 # ==========================================
 
 import tkinter as tk
