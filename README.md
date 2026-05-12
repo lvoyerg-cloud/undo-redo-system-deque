@@ -1,242 +1,160 @@
-UndoRedoSystem - Sistema Undo y Redo con Deque
-Descripción
+# UndoRedoSystem - Sistema Undo y Redo con Deque
 
-UndoRedoSystem es una aplicación desarrollada en Python que simula un sistema de edición con funcionalidades de Undo y Redo, utilizando una estructura de datos tipo Deque (Double Ended Queue) implementada manualmente.
+## Descripción
 
-El sistema permite registrar acciones realizadas por el usuario, almacenarlas en un historial y administrar operaciones de deshacer y rehacer acciones, simulando el comportamiento de editores reales.
+UndoRedoSystem es una aplicación desarrollada en Python que simula un sistema de edición con funcionalidades de **Undo** y **Redo**, utilizando una estructura de datos tipo **Deque** implementada manualmente.
 
-Además, el proyecto incluye una interfaz gráfica desarrollada con Tkinter para facilitar la interacción con el sistema.
+El sistema permite registrar acciones realizadas por el usuario, deshacer cambios, rehacer acciones eliminadas y visualizar el historial completo de operaciones mediante una interfaz gráfica desarrollada con Tkinter.
 
-Objetivo
+## Objetivo
 
-Implementar y analizar el funcionamiento de una estructura Deque aplicada a un entorno de edición, permitiendo administrar historiales de acciones mediante operaciones de:
+Implementar una estructura de datos Deque aplicada a un problema práctico de edición, separando correctamente la lógica del sistema y la interfaz gráfica.
 
-agregar acciones
-undo
-redo
-mostrar historial
-mostrar estado actual
-Tecnologías utilizadas
-Python 3
-Tkinter (Interfaz gráfica)
-Programación orientada a objetos
-unittest
-Requisitos del sistema
+## Tecnologías utilizadas
+
+* Python 3
+* Tkinter (Interfaz gráfica)
+* Programación orientada a objetos (POO)
+* unittest para pruebas unitarias
+
+## Requisitos del sistema
 
 Antes de ejecutar el proyecto, asegúrese de contar con:
 
-Python 3.10 o superior instalado
-Tkinter habilitado (incluido por defecto en Python)
-Instalación y ejecución
-1. Clonar el repositorio
-git clone https://github.com/usuario/UndoRedoSystem.git
+* Python 3.12 o superior
+* Tkinter habilitado (incluido por defecto en Python)
 
-Ejemplo:
+## Instalación y ejecución
 
+### 1. Clonar el repositorio
+
+```bash
 git clone https://github.com/Lvoyerg-Cloud/UndoRedoSystem.git
-2. Ingresar al directorio del proyecto
+```
+
+### 2. Ingresar al directorio del proyecto
+
+```bash
 cd UndoRedoSystem
-3. Ejecutar el programa
-python undo_redo_system.py
+```
 
-Ejecución desde la terminal:
+## Ejecución desde la terminal
 
-git clone https://github.com/Lvoyerg-Cloud/UndoRedoSystem.git
-cd UndoRedoSystem
-python undo_redo_system.py
-Funcionamiento del sistema
+```bash
+python "UndoRedoSystem.py"
+```
 
-El sistema realiza las siguientes operaciones:
+## Funcionamiento del sistema
 
-Registro de acciones.
-Almacenamiento de acciones en una Deque.
-Operaciones de Undo.
-Operaciones de Redo.
-Visualización del historial.
-Visualización del estado actual.
-Eliminación de letras o palabras específicas.
-Restauración del texto original.
-Estructura principal del sistema
+El sistema permite realizar las siguientes operaciones:
 
-El proyecto está organizado en tres componentes principales:
+* Registrar nuevas acciones
+* Deshacer acciones (Undo)
+* Rehacer acciones (Redo)
+* Mostrar historial de acciones
+* Mostrar el estado actual del sistema
+* Eliminar letras o palabras específicas
+* Restaurar texto eliminado
 
-1. Clase Deque
+## Estructura del proyecto
 
-Implementa manualmente la estructura de datos Deque.
+El proyecto se encuentra dividido en diferentes componentes:
 
-Incluye métodos como:
+### Clase Deque
 
-add_front(item)
-add_rear(item)
-remove_front()
-remove_rear()
-is_empty()
-size()
-2. Clase UndoRedoSystem
+Implementa la estructura de datos principal utilizada para administrar el historial de acciones.
+
+Métodos implementados:
+
+* add_front(item)
+* add_rear(item)
+* remove_front()
+* remove_rear()
+* is_empty()
+* size()
+
+### Clase UndoRedoSystem
 
 Encapsula toda la lógica principal del sistema:
 
-historial de acciones
-estado actual
-lógica undo
-lógica redo
-restauración de texto
-3. Clase EditorApp
+* Historial de acciones
+* Estado actual
+* Operaciones Undo y Redo
+* Validaciones
+* Restauración de texto
 
-Gestiona la interfaz gráfica utilizando Tkinter.
+### Clase EditorApp
 
-Permite interactuar con el sistema mediante botones y cuadros de texto.
+Gestiona toda la interfaz gráfica utilizando Tkinter.
 
-Funcionalidades del sistema
-Registrar acción
+## Validaciones implementadas
 
-Permite agregar nuevas acciones al historial.
+El sistema controla correctamente:
 
-Ejemplo:
+* Acciones vacías o inválidas
+* Undo sin historial disponible
+* Redo sin acciones disponibles
+* Restauración sin respaldo previo
+* Estados inconsistentes
 
-system.add_action("ESCRIBIR HOLA")
-Undo
+## Pruebas mínimas
 
-Deshace la última acción registrada.
+El proyecto incluye pruebas unitarias utilizando unittest.
 
-Ejemplo:
+### Prueba 1: Inserción en Deque
 
-system.undo()
-Redo
-
-Rehace una acción previamente deshecha.
-
-Ejemplo:
-
-system.redo()
-Mostrar historial
-
-Visualiza todas las acciones almacenadas en el sistema.
-
-Mostrar estado actual
-
-Muestra la acción actual activa dentro del sistema.
-
-Eliminar texto
-
-Permite eliminar letras o palabras específicas.
-
-Ejemplo:
-
-system.delete_specific_text("HOLA")
-Restaurar texto
-
-Recupera el historial original antes de eliminar contenido.
-
-Ejemplo:
-
-system.restore_original_text()
-Validaciones implementadas
-
-El sistema maneja correctamente los siguientes casos:
-
-Undo sin historial disponible.
-Redo sin acciones pendientes.
-Acciones vacías.
-Restauración inválida.
-Texto inexistente.
-Estados inconsistentes.
-Pruebas mínimas
-Prueba 1: Verificación de inserción en Deque
-
-Objetivo: Validar que la Deque almacene elementos correctamente.
-
-Procedimiento:
-
-Insertar elementos.
-Verificar tamaño.
-Validar contenido.
+**Objetivo:** Verificar inserción correcta de elementos.
 
 Resultado esperado:
 
-Los elementos deben almacenarse correctamente.
-Prueba 2: Validación de Undo
+* El tamaño del Deque debe aumentar correctamente.
 
-Objetivo: Confirmar funcionamiento de undo.
+### Prueba 2: Eliminación en Deque
 
-Procedimiento:
-
-Registrar una acción.
-Ejecutar undo.
-Verificar estado actual.
+**Objetivo:** Verificar extracción correcta de elementos.
 
 Resultado esperado:
 
-El sistema debe regresar al estado inicial.
-Prueba 3: Validación de Redo
+* El elemento eliminado debe coincidir con el insertado.
 
-Objetivo: Confirmar funcionamiento de redo.
+### Prueba 3: Validación de Deque vacío
 
-Procedimiento:
-
-Registrar acción.
-Ejecutar undo.
-Ejecutar redo.
+**Objetivo:** Confirmar detección de estructura vacía.
 
 Resultado esperado:
 
-La acción debe restaurarse correctamente.
-Prueba 4: Validación de entradas vacías
+* is_empty() debe retornar True.
 
-Objetivo: Comprobar manejo de errores.
+### Prueba 4: Funcionamiento de Undo
 
-Procedimiento:
-
-Ingresar una acción vacía.
-Intentar agregarla.
+**Objetivo:** Validar deshacer acciones.
 
 Resultado esperado:
 
-El sistema debe mostrar mensaje de error.
-Interfaz gráfica
+* El sistema debe regresar al estado anterior.
 
-La interfaz gráfica incluye:
+### Prueba 5: Funcionamiento de Redo
 
-Campo de entrada
-Botón agregar
-Botón undo
-Botón redo
-Botón borrar palabra
-Botón restaurar texto
-Historial visual
-Estado actual
-Botón salir
-Separación de responsabilidades
+**Objetivo:** Validar rehacer acciones.
 
-El proyecto mantiene separada la lógica y la interfaz gráfica.
+Resultado esperado:
 
-Organización
-Clase Deque
+* El sistema debe restaurar la acción deshecha.
 
-Maneja únicamente la estructura de datos.
+## Características principales
 
-Clase UndoRedoSystem
+* Implementación propia de Deque
+* Interfaz gráfica amigable
+* Separación entre lógica y UI
+* Manejo de errores y validaciones
+* Historial dinámico de acciones
+* Sistema de restauración de texto
 
-Controla toda la lógica del sistema.
+## Autor
 
-Clase EditorApp
-
-Gestiona únicamente la interfaz gráfica.
-
-Esta estructura facilita:
-
-mantenimiento
-reutilización
-pruebas
-escalabilidad
-Restricciones del proyecto
-Python 3.12+ recomendado
-No se utilizan bases de datos
-No se utilizan frameworks web
-La estructura principal es una Deque implementada manualmente
-La lógica está separada de la interfaz
-Autor
-
-Louis Neil Voyer García
+**Louis Neil Voyer García**
 Carnet: 2890-24-16741
+Curso: Programación III
+Catedrático: Ing. Yoel Monzón
 Universidad Mariano Gálvez
+
