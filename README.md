@@ -32,12 +32,12 @@ Antes de ejecutar el proyecto, asegúrese de contar con:
 git clone https://github.com/usuario/UndoRedoSystem.git
 ```
 Ejemplo:
-https://github.com/lvoyerg-cloud/undo-redo-system-deque
+git clone https://github.com/lvoyerg-cloud/undo-redo-system-deque.git
 
 ### 2. Ingresar al directorio del proyecto
 
 ```bash
-cd UndoRedoSystem
+cd undo-redo-system-deque
 ```
 
 ## 3. Ejecutar programa 
@@ -46,9 +46,9 @@ cd UndoRedoSystem
 python "undo_redo_system.py"
 ```
 Ejecución desde la terminal: 
-1. git clone https://github.com/Lvoyerg-Cloud/UndoRedoSystem.git
-2. cd UndoRedoSystem
-3. python "UndoRedoSystem.py"
+1. git clone https://github.com/lvoyerg-cloud/undo-redo-system-deque.git
+2. cd undo-redo-system-deque
+3. python "undo_redo_system.py"
 ## Funcionamiento del sistema
 
 El sistema permite realizar las siguientes operaciones:
