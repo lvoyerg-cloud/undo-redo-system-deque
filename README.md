@@ -40,7 +40,7 @@ git clone https://github.com/Lvoyerg-Cloud/PrintQueueSim.git
 cd UndoRedoSystem
 ```
 
-## Ejecución desde la terminal
+## Ejecutar programa 
 
 ```bash
 python "UndoRedoSystem.py"
